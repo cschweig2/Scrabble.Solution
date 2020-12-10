@@ -34,9 +34,9 @@ No known bugs at this time.
   </tr>
   <tr>
     <td>1</td>
-    <td>Create a constructor that holds age and average life expectancy.
-    <td>AgeCalculator(25, 73)</td>
-    <td>toEqual(25, 73)</td>
+    <td>Create a Words class</td>
+    <td>Words newWords = new Words();</td>
+    <td>newWords</td>
   </tr>
 </table>
 <br>

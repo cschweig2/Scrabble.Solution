@@ -30,5 +30,13 @@ namespace Scrabble.Tests
             char[] result = Words.GetArray(word);
             CollectionAssert.AreEqual(result, testLetters2);
         }
+        [TestMethod]
+        public void GetPoints_ReturnsUsersPoints_Int()
+        {
+            char[] testLetters3 = {'h', 'e', 'l', 'l', 'o'};
+            int testScore = 8;
+            int result = Words.GetPoints(testLetters3);
+            Assert.AreEqual(result, testScore);
+        }
     }
 }

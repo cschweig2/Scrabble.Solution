@@ -33,9 +33,10 @@ namespace Scrabble.Tests
         [TestMethod]
         public void GetPoints_ReturnsUsersPoints_Int()
         {
-            char[] testLetters3 = {'h', 'e', 'l', 'l', 'o'};
+            char[] testLetters3 = {'H', 'E', 'L', 'L', 'O'};
             int testScore = 8;
-            int result = Words.GetPoints(testLetters3);
+            int score = 0;
+            int result = Words.GetPoints(testLetters3, score);
             Assert.AreEqual(result, testScore);
         }
     }

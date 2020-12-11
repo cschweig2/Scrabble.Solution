@@ -6,12 +6,8 @@ using System;
 namespace Scrabble.Tests
 {
     [TestClass]
-    public class WordsTests : IDisposable
+    public class WordsTests
     {
-        public void Dispose()
-        {
-            Words.ClearAll();
-        }
         [TestMethod]
         public void WordsConstructor_CreatesInstancesOfWords_Words()
         {
@@ -23,17 +19,16 @@ namespace Scrabble.Tests
         {
             char [] testLetters = { };
             Words newWords = new Words();
-            char [] result = Words.GetArray("test");
+            char [] result = Words.GetArray("");
             CollectionAssert.AreEqual(result, testLetters);
         }
         [TestMethod]
         public void GetArray_CreatesArrayOfChars_Array()
         {
-            char[] testLetters = {'h', 'e', 'l', 'l', 'o'};
+            char[] testLetters2 = {'h', 'e', 'l', 'l', 'o'};
             string word = "hello";
             char[] result = Words.GetArray(word);
-            CollectionAssert.AreEqual(result, testLetters);
+            CollectionAssert.AreEqual(result, testLetters2);
         }
-        
     }
 }

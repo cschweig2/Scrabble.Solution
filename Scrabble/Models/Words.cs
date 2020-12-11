@@ -8,7 +8,6 @@ namespace Scrabble.Models
     {
         public string word;
         private int _score = 0;
-        private static char[] _charArray = { };
 
         private static Dictionary<char, int> letters = new Dictionary<char, int>() { {'A', 1}, {'E', 1}, {'I', 1}, {'O', 1}, {'U', 1}, 
 		{'L', 1}, {'N', 1}, {'R', 1}, {'S', 1}, {'T', 1},
@@ -19,16 +18,11 @@ namespace Scrabble.Models
 		{'J', 8}, {'X', 8},
 		{'Q',10}, {'Z',10}};
 
-        public static char[] GetArray(string word, char[] array)
+        public static char[] GetArray(string word)
         {
-            array = word.ToCharArray();
+            char[] array = word.ToCharArray();
             return array;
         }
-        public static void ClearAll()
-        {
-            _charArray.Clear();
-        }
-
     }
 }
 
